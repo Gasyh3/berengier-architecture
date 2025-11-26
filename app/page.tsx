@@ -10,8 +10,7 @@ const images = [
   },
   {
     src: "/assets/DukeDSC_4803.jpg"
-  },
-
+  }
 ];
 
 const services = [
@@ -57,14 +56,18 @@ const reels = [
 
 export default function HomePage() {
   return (
-    <div className="space-y-24 pb-24">
+    <div className="space-y-24 pb-24 overflow-x-hidden">
       <Hero />
 
       <section id="services" className="mx-auto max-w-6xl px-6 scroll-mt-24">
         <div className="rounded-3xl border border-accent/40 bg-accent/10 px-6 py-16 shadow-lg shadow-accent/20 sm:px-10">
           <div className="flex flex-col gap-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-800">Services & tarifs</p>
-            <h2 className="text-3xl font-semibold text-slate-900">Des prestations pensées pour vos chantiers</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-800">
+              Services & tarifs
+            </p>
+            <h2 className="text-3xl font-semibold text-slate-900">
+              Des prestations pensées pour vos chantiers
+            </h2>
             <p className="text-base text-slate-700">
               Transparence totale : vous maîtrisez vos coûts tout en gagnant en qualité et en réactivité.
             </p>
@@ -113,17 +116,26 @@ export default function HomePage() {
       </section>
 
       <section className="bg-white scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 py-16 h-full overflow-y-auto">
+        <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="flex flex-col gap-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Réels & présentations</p>
-            <h2 className="text-3xl font-semibold text-slate-900">Visualisez les projets en format immersif</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              Réels & présentations
+            </p>
+            <h2 className="text-3xl font-semibold text-slate-900">
+              Visualisez les projets en format immersif
+            </h2>
             <p className="text-base text-slate-600">
               Deux formats courts pour faire ressentir le rendu final dans vos présentations clients ou sur vos réseaux.
             </p>
           </div>
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             {reels.map((reel) => (
-              <ReelCard key={reel.title} title={reel.title} description={reel.description} src={reel.src} />
+              <ReelCard
+                key={reel.title}
+                title={reel.title}
+                description={reel.description}
+                src={reel.src}
+              />
             ))}
           </div>
         </div>
@@ -131,59 +143,75 @@ export default function HomePage() {
 
       <section id="contact" className="bg-white scroll-mt-24">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-[32px] border border-accent/40 bg-gradient-to-br from-white via-accent/15 to-white p-8 shadow-[0_45px_120px_-50px_rgba(0,0,0,0.6)] lg:p-12">
+          <div className="rounded-[32px] border border-accent/40 bg-gradient-to-br from-white via-accent/15 to-white p-6 shadow-[0_45px_120px_-50px_rgba(0,0,0,0.6)] sm:p-8 lg:p-12">
             <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
               <div className="space-y-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Contactez-moi</p>
-                <h2 className="text-3xl font-semibold text-slate-900">Un interlocuteur unique et disponible</h2>
-                <p className="text-base text-slate-700">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent text-center lg:text-left ">Contactez-moi</p>
+                <h2 className="text-3xl font-semibold text-slate-900 text-center lg:text-left lg:w-full">
+                  Un interlocuteur unique et disponible
+                </h2>
+                <p className="text-base text-slate-700 text-center lg:text-left lg:w-full">
                   Un besoin précis, un délai serré, ou simplement une charge de production à déléguer ? Je suis disponible
                   pour échanger rapidement sur vos besoins techniques — plans, rendus, modélisations.
                 </p>
-                <div className="rounded-3xl border border-white bg-white/70 p-8 text-center shadow-xl shadow-accent/40 backdrop-blur">
-                  <div className="flex flex-col items-center gap-4">
+                <div className="rounded-3xl border border-white bg-white/70 p-6 text-center shadow-xl shadow-accent/40 backdrop-blur w-4/5 lg:w-full sm:p-8">
+                  <div className="flex flex-col items-center gap-4 ">
                     <Image
                       src="/assets/logo/noir_sf.png"
                       alt="Bérengier Architecture"
                       width={180}
                       height={50}
-                      className="h-auto w-40"
+                      className="h-auto w-40 max-w-full"
                     />
-
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600">
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">Plans techniques</span>
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">Rendus photoréalistes</span>
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">Soutien chantier</span>
+                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
+                    Plans techniques
+                  </span>
+                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
+                    Rendus photoréalistes
+                  </span>
+                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
+                    Soutien chantier
+                  </span>
                 </div>
               </div>
               <div className="grid gap-4">
                 {contactInfo.map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-center gap-4 rounded-2xl border border-accent/30 bg-white/90 p-5 shadow-sm shadow-accent/40 backdrop-blur"
+                    className="flex w-full items-center gap-4 rounded-2xl border border-accent/30 bg-white/90 p-5 shadow-sm shadow-accent/40 backdrop-blur overflow-hidden"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/30 text-lg text-slate-800">
+                    <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-accent/30 text-lg text-slate-800">
                       {item.icon}
                     </span>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{item.label}</p>
-                      <p className="text-base font-semibold text-slate-900">{item.value}</p>
+
+                    {/* bloc texte qui peut rétrécir */}
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                        {item.label}
+                      </p>
+                      <p className="text-base font-semibold text-slate-900 break-words">
+                        {item.value}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
       <section id="about" className="mx-auto max-w-6xl px-6 scroll-mt-24">
-        <div className="grid gap-10 rounded-3xl border border-slate-200 bg-white p-10 shadow-sm lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:grid-cols-2 lg:items-center lg:p-10">
           <div className="space-y-4 text-base leading-relaxed text-slate-700">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">À propos</p>
-            <h2 className="text-3xl font-semibold text-slate-900">Derrière chaque plan, un regard de terrain</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent text-center lg:text-left">À propos</p>
+            <h2 className="text-3xl font-semibold text-slate-900 text-center lg:text-left ">
+              Derrière chaque plan, un regard de terrain
+            </h2>
             <p>
               Diplômé de l’institut CREAD à Lyon, j’ai grandi dans une famille d’entrepreneur du bâtiment. Les chantiers,
               je les connais de l’intérieur, plans à la main comme mains dans le ciment.
@@ -198,7 +226,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative h-64 w-64 rounded-full border border-slate-200 bg-slate-100 p-3 shadow-xl shadow-slate-900/5">
+            <div className="relative h-56 w-56 rounded-full border border-slate-200 bg-slate-100 p-3 shadow-xl shadow-slate-900/5 sm:h-64 sm:w-64">
               <div className="absolute inset-0 rounded-full border border-white/40" />
               <Image
                 src="/assets/DukeDSC_4803.jpg"
