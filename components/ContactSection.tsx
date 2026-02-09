@@ -9,7 +9,7 @@ const socialLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-screen min-h-screen scroll-mt-32 mt-4 bg-darkbase">
+    <section id="contact" className="w-screen min-h-screen scroll-mt-32 mt-4 pt-5 bg-darkbase">
       <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-14 px-6 py-14 sm:px-10 lg:grid-cols-12 lg:px-16">
         <div className="flex flex-col justify-between pt-6 lg:col-span-7">
           <div>

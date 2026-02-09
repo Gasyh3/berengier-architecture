@@ -2,37 +2,42 @@ import Image from "next/image";
 
 export default function AboutSplitHero() {
   return (
-    <section className="w-screen h-screen bg-surface">
-      <div className="grid h-full w-full grid-cols-1 lg:grid-cols-[40%_60%]">
-        <div className="relative w-full aspect-square lg:aspect-auto lg:h-full">
+    <section className="lg:h-screen h-screen h-[350px] bg-surface">
+      {/* 2 colonnes dès mobile */}
+      <div className="grid h-full w-full grid-cols-[35%_65%] lg:grid-cols-[40%_60%] lg:h-full">
+
+        {/* IMAGE */}
+        <div className="relative h-full w-full">
           <Image
             src="/assets/sets/8.jpg"
             alt="Rendu 3D d’aménagement intérieur à Lyon"
             fill
             className="object-cover"
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            sizes="(min-width: 1024px) 40vw, 45vw"
+            priority
           />
         </div>
-        <div className="w-full aspect-square bg-[#B9AB8E] lg:aspect-auto lg:h-full">
-          <div className="flex h-full items-center">
-            <div className="w-full max-w-[22rem] px-6 sm:max-w-md sm:px-10 lg:max-w-2xl lg:px-20">
-              <h2 className="font-racoleta leading-[1.08] tracking-tight break-words">
-                <span className="block text-[clamp(2rem,7vw,3rem)] font-semibold text-black lg:text-[clamp(3rem,5vw,5.5rem)]">
-                  Derrière
-                </span>
-                <span className="block text-[clamp(2rem,7vw,3rem)] font-semibold text-black lg:text-[clamp(3rem,5vw,5.5rem)]">
-                  chaque plan,
-                </span>
-                <span className="block text-[clamp(2.2rem,8vw,3.2rem)] font-bold text-white lg:text-[clamp(3rem,5vw,5.5rem)]">
-                  Un regard
-                </span>
-                <span className="block text-[clamp(2.2rem,8vw,3.2rem)] font-bold text-white lg:text-[clamp(3rem,5vw,5.5rem)]">
-                  de terrain.
-                </span>
-              </h2>
-            </div>
+
+        {/* TEXTE */}
+        <div className="flex h-full w-full items-center bg-[#B9AB8E]">
+          <div className="w-full max-w-[18rem] px-4 sm:max-w-md sm:px-8 lg:max-w-2xl lg:px-20">
+            <h2 className="font-racoleta leading-[1.05] tracking-tight">
+              <span className="block text-[clamp(1.6rem,5vw,3rem)] font-semibold text-black lg:text-[clamp(3rem,5vw,5.5rem)]">
+                Derrière
+              </span>
+              <span className="block text-[clamp(1.6rem,5vw,3rem)] font-semibold text-black lg:text-[clamp(3rem,5vw,5.5rem)]">
+                chaque plan,
+              </span>
+              <span className="block text-[clamp(1.8rem,6vw,3.2rem)] font-bold text-white lg:text-[clamp(3rem,5vw,5.5rem)]">
+                Un regard
+              </span>
+              <span className="block text-[clamp(1.8rem,6vw,3.2rem)] font-bold text-white lg:text-[clamp(3rem,5vw,5.5rem)]">
+                de terrain.
+              </span>
+            </h2>
           </div>
         </div>
+
       </div>
     </section>
   );
