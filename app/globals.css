@@ -6,6 +6,23 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
+
+@keyframes loader-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
+
+.animate-loader {
+  animation: loader-slide 1.2s ease-in-out infinite;
 }

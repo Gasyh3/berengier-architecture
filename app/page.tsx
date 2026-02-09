@@ -1,5 +1,19 @@
 import Carousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
+import IntroStatement from "@/components/IntroStatement";
+import ShowcaseGrid from "@/components/ShowcaseGrid";
+import ProcessStatement from "@/components/ProcessStatement";
+import ValuesTriptych from "@/components/ValuesTriptych";
+import GallerySplit from "@/components/GallerySplit";
+import ServicesAlaCarte from "@/components/ServicesAlaCarte";
+import AboutIntro from "@/components/AboutIntro";
+import AboutSplitHero from "@/components/AboutSplitHero";
+import AboutBioSplit from "@/components/AboutBioSplit";
+import GalleryMosaicTall from "@/components/GalleryMosaicTall";
+import ProjectionIntro from "@/components/ProjectionIntro";
+import ProjectionVideoSplit from "@/components/ProjectionVideoSplit";
+import VideoServicesSplit from "@/components/VideoServicesSplit";
+import ContactSection from "@/components/ContactSection";
 import ServiceCard from "@/components/ServiceCard";
 import ReelCard from "@/components/ReelCard";
 import Image from "next/image";
@@ -56,190 +70,24 @@ const reels = [
 
 export default function HomePage() {
   return (
-    <div className="space-y-24 pb-24 overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Hero />
+      <IntroStatement />
+      <ShowcaseGrid />
+      <ProcessStatement />
+      <ValuesTriptych />
+      <GallerySplit />
+      <ServicesAlaCarte />
+      <AboutIntro />
+      <AboutSplitHero />
+      <AboutBioSplit />
+      <GalleryMosaicTall />
+      <ProjectionIntro />
+      <ProjectionVideoSplit />
+      <VideoServicesSplit />
+      <ContactSection />
 
-      <section id="services" className="mx-auto max-w-6xl px-6 scroll-mt-24">
-        <div className="rounded-3xl border border-accent/40 bg-accent/10 px-6 py-16 shadow-lg shadow-accent/20 sm:px-10">
-          <div className="flex flex-col gap-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-800">
-              Services & tarifs
-            </p>
-            <h2 className="text-3xl font-semibold text-slate-900">
-              Des prestations pensées pour vos chantiers
-            </h2>
-            <p className="text-base text-slate-700">
-              Transparence totale : vous maîtrisez vos coûts tout en gagnant en qualité et en réactivité.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section id="renders" className="bg-gradient-to-b from-accent/15 via-white to-white scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="flex flex-col gap-3 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Mes derniers rendus 3D
-            </p>
-            <h2 className="text-3xl font-semibold text-slate-900">Valorisez vos projets par l’image</h2>
-            <p className="text-base text-slate-600">
-              Des visuels percutants pour sécuriser vos clients, investisseurs et partenaires.
-            </p>
-          </div>
-          <div className="mt-10">
-            <Carousel />
-          </div>
-        </div>
-      </section>
-
-      <section id="references" className="mx-auto max-w-6xl px-6 scroll-mt-24">
-        <div className="rounded-3xl border border-accent/40 bg-white px-6 py-10 text-center shadow-lg shadow-accent/20">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
-            Des entreprises qui me font confiance
-          </p>
-          <div className="mt-8 grid gap-4 text-sm font-semibold uppercase tracking-wide text-slate-600 sm:grid-cols-3 lg:grid-cols-6">
-            {partners.map((partner) => (
-              <div
-                key={partner}
-                className="rounded-full border border-accent/40 bg-accent/10 px-4 py-3 text-center"
-              >
-                {partner}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="flex flex-col gap-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Réels & présentations
-            </p>
-            <h2 className="text-3xl font-semibold text-slate-900">
-              Visualisez les projets en format immersif
-            </h2>
-            <p className="text-base text-slate-600">
-              Deux formats courts pour faire ressentir le rendu final dans vos présentations clients ou sur vos réseaux.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            {reels.map((reel) => (
-              <ReelCard
-                key={reel.title}
-                title={reel.title}
-                description={reel.description}
-                src={reel.src}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="bg-white scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-[32px] border border-accent/40 bg-gradient-to-br from-white via-accent/15 to-white p-6 shadow-[0_45px_120px_-50px_rgba(0,0,0,0.6)] sm:p-8 lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
-              <div className="space-y-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent text-center lg:text-left ">Contactez-moi</p>
-                <h2 className="text-3xl font-semibold text-slate-900 text-center lg:text-left lg:w-full">
-                  Un interlocuteur unique et disponible
-                </h2>
-                <p className="text-base text-slate-700 text-center lg:text-left lg:w-full">
-                  Un besoin précis, un délai serré, ou simplement une charge de production à déléguer ? Je suis disponible
-                  pour échanger rapidement sur vos besoins techniques — plans, rendus, modélisations.
-                </p>
-                <div className="rounded-3xl border border-white bg-white/70 p-6 text-center shadow-xl shadow-accent/40 backdrop-blur w-4/5 lg:w-full sm:p-8">
-                  <div className="flex flex-col items-center gap-4 ">
-                    <Image
-                      src="/assets/logo/noir_sf.png"
-                      alt="Bérengier Architecture"
-                      width={180}
-                      height={50}
-                      className="h-auto w-40 max-w-full"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600">
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
-                    Plans techniques
-                  </span>
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
-                    Rendus photoréalistes
-                  </span>
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2">
-                    Soutien chantier
-                  </span>
-                </div>
-              </div>
-              <div className="grid gap-4">
-                {contactInfo.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex w-full items-center gap-4 rounded-2xl border border-accent/30 bg-white/90 p-5 shadow-sm shadow-accent/40 backdrop-blur overflow-hidden"
-                  >
-                    <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-accent/30 text-lg text-slate-800">
-                      {item.icon}
-                    </span>
-
-                    {/* bloc texte qui peut rétrécir */}
-                    <div className="min-w-0">
-                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                        {item.label}
-                      </p>
-                      <p className="text-base font-semibold text-slate-900 break-words">
-                        {item.value}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="mx-auto max-w-6xl px-6 scroll-mt-24">
-        <div className="grid gap-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:grid-cols-2 lg:items-center lg:p-10">
-          <div className="space-y-4 text-base leading-relaxed text-slate-700">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent text-center lg:text-left">À propos</p>
-            <h2 className="text-3xl font-semibold text-slate-900 text-center lg:text-left ">
-              Derrière chaque plan, un regard de terrain
-            </h2>
-            <p>
-              Diplômé de l’institut CREAD à Lyon, j’ai grandi dans une famille d’entrepreneur du bâtiment. Les chantiers,
-              je les connais de l’intérieur, plans à la main comme mains dans le ciment.
-            </p>
-            <p>
-              Depuis 5 ans, je me suis lancé à mon compte comme architecte d’intérieur. J’accompagne les entreprises du
-              bâtiment dans leurs projets, en apportant un regard technique, des outils clairs et des rendus de qualité.
-            </p>
-            <p>
-              Rénover, réagencer, valoriser l’existant : pour moi, ce n’est pas juste un métier, c’est une passion.
-              Trouver des solutions concrètes, efficaces et bien pensées, c’est ce qui m’anime chaque jour.
-            </p>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="relative h-56 w-56 rounded-full border border-slate-200 bg-slate-100 p-3 shadow-xl shadow-slate-900/5 sm:h-64 sm:w-64">
-              <div className="absolute inset-0 rounded-full border border-white/40" />
-              <Image
-                src="/assets/DukeDSC_4803.jpg"
-                alt="Portrait de Bérengier"
-                fill
-                className="rounded-full object-cover"
-                sizes="400px"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

@@ -1,43 +1,39 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
   { href: "#services", label: "Services" },
-  { href: "#renders", label: "Rendus 3D" },
-  { href: "#references", label: "Références" },
-  { href: "#about", label: "À propos" },
+  { href: "#apropos", label: "A propos" },
+  { href: "#conception-video", label: "Conception vidéo" }
 ];
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/90 text-slate-900 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+    <header className="absolute left-0 top-0 z-50 w-full text-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/assets/logo/noir_sf.png"
-            alt="Atelier Berengier Logo"
-            width={150}
-            height={40}
+            src="/assets/logo/ico_sf.png"
+            alt="Atelier Bérengier logo"
+            width={128}
+            height={128}
+            className="h-12 w-auto md:h-20"
+            priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 lg:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-white/90 md:flex md:text-base lg:text-lg">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="transition hover:text-slate-900"
+              className="transition hover:text-white hover:underline"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="rounded-full bg-accent px-5 py-2 text-white shadow-sm transition hover:bg-accent-dark"
-          >
+          <a href="#contact" className="font-bold text-white transition hover:underline">
             Contactez-moi
           </a>
         </nav>

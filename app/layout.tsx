@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { racoleta, reboleta } from "./fonts";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InitialLoader from "@/components/InitialLoader";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -85,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${racoleta.variable} ${reboleta.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -93,6 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-slate-50 text-slate-900`}>
+        <InitialLoader />
         <Header />
         <main>{children}</main>
         <Footer />

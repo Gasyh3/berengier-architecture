@@ -12,10 +12,14 @@ const config: Config = {
           DEFAULT: "#F2C891",
           light: "#F7D9B4",
           dark: "#E7AA5E"
-        }
+        },
+        darkbase: "#0E0E0E",
+        surface: "#F2F2F2"
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        racoleta: ["var(--font-racoleta)", "serif"],
+        reboleta: ["var(--font-reboleta)", "serif"]
       }
     }
   },
