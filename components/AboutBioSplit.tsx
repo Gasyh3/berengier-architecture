@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function AboutBioSplit() {
   return (
     <section className="w-screen h-screen bg-surface">
+      <h2 className="sr-only">À propos de Bérengier Architecture</h2>
       <div className="grid h-full w-full grid-cols-1 lg:grid-cols-12">
         <div className="w-full bg-[#B9AB8E] h-[110vw] sm:h-[95vw] lg:col-span-8 lg:h-full">
           <div className="flex h-full items-center">
@@ -30,7 +31,7 @@ export default function AboutBioSplit() {
         <div className="relative w-full aspect-square lg:col-span-4 lg:aspect-auto lg:h-full">
           <Image
             src="/assets/DukeDSC_4803.jpg"
-            alt="Portrait"
+            alt="Portrait de Bérengier"
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 33vw, 100vw"

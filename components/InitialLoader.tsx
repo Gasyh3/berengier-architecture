@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const MAX_WAIT_MS = 2500;
+const MAX_WAIT_MS = 1200;
 
 export default function InitialLoader() {
   const [visible, setVisible] = useState(true);
@@ -24,17 +24,17 @@ export default function InitialLoader() {
       }, 450);
     };
 
-    const onLoad = () => hide();
+    const onReady = () => hide();
 
-    if (document.readyState === "complete") {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
       hide();
     } else {
-      window.addEventListener("load", onLoad, { once: true });
+      window.addEventListener("DOMContentLoaded", onReady, { once: true });
       timeoutId = setTimeout(() => hide(), MAX_WAIT_MS);
     }
 
     return () => {
-      window.removeEventListener("load", onLoad);
+      window.removeEventListener("DOMContentLoaded", onReady);
       if (timeoutId) clearTimeout(timeoutId);
       html.style.overflow = previousOverflow;
     };

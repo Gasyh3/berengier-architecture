@@ -4,6 +4,7 @@ export default function IntroStatement() {
       id="statement"
       className="relative flex h-screen w-screen items-center justify-center bg-darkbase"
     >
+      <h2 className="sr-only">Message d’introduction</h2>
       <div className="mx-auto w-full max-w-6xl px-6 text-center">
         <p className="font-reboleta text-3xl font-light leading-snug text-white/90 sm:text-4xl lg:text-5xl">
           Vous avez un projet d’aménagement ?

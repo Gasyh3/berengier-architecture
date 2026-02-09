@@ -7,7 +7,7 @@ export default function AboutSplitHero() {
         <div className="relative w-full aspect-square lg:aspect-auto lg:h-full">
           <Image
             src="/assets/sets/8.jpg"
-            alt="About visual"
+            alt="Rendu 3D d’aménagement intérieur à Lyon"
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 50vw, 100vw"

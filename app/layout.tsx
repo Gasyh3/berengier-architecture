@@ -8,8 +8,10 @@ import InitialLoader from "@/components/InitialLoader";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
+const siteUrl = "https://atelier-berengier.fr";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://berengier-architecture.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
     template: "%s | Bérengier Architecture"
@@ -33,16 +35,16 @@ export const metadata: Metadata = {
     title: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
     description:
       "Plans techniques, relevés et rendus 3D pour les professionnels du bâtiment à Lyon et partout en France.",
-    url: "https://atelier-berengier.fr",
+    url: siteUrl,
     siteName: "Bérengier Architecture",
     locale: "fr_FR",
     type: "website",
     images: [
       {
-        url: "/assets/3D/14ce0d00-514b-4e02-988d-92754cbed77b.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rendu 3D par Bérengier Architecture"
+        alt: "Bérengier Architecture — Architecte d’intérieur à Lyon"
       }
     ]
   },
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     title: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
     description:
       "Architecte indépendant basé à Lyon : plans techniques, modélisations et rendus 3D pour entreprises du bâtiment.",
-    images: ["/assets/3D/14ce0d00-514b-4e02-988d-92754cbed77b.png"]
+    images: ["/og-image.jpg"]
   },
   icons: {
     icon: "/assets/favicon.ico"
@@ -60,21 +62,28 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Architect",
+  "@type": "ProfessionalService",
   name: "Bérengier Architecture",
-  url: "https://atelier-berengier.fr",
-  image: "https://atelier-berengier.fr/assets/logo/noir_sf.png",
+  url: siteUrl,
+  image: `${siteUrl}/assets/logo/noir_sf.png`,
+  logo: `${siteUrl}/assets/logo/noir_sf.png`,
   description:
-    "Architecte indépendant à Lyon spécialisé en plans techniques, relevés de chantier et rendus 3D photoréalistes.",
+    "Architecte d’intérieur à Lyon spécialisé en plans techniques, rendus 3D photoréalistes et conception sur mesure.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lyon",
     addressCountry: "FR"
   },
   areaServed: ["Lyon", "Auvergne-Rhône-Alpes", "France"],
-  telephone: "+33671234589",
-  email: "contact@atelier-berengier.fr",
-  sameAs: [],
+  priceRange: "€€",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 45.764,
+    longitude: 4.8357
+  },
+  telephone: "+33770516162",
+  email: "berengier.architecture@gmail.com",
+  sameAs: ["https://www.instagram.com/", "https://www.linkedin.com/", "https://www.facebook.com/"],
   founder: {
     "@type": "Person",
     name: "Bérengier"

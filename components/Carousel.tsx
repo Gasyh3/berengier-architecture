@@ -124,7 +124,7 @@ export default function Carousel() {
           >
             <Image
               src={image.src}
-              alt={"Carousel image " + (index + 1)}
+              alt={`Rendu 3D architectural ${index + 1}`}
               fill
               className={`rounded-[36px] object-cover transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${index === active ? "scale-100" : "scale-95"
                 }`}
