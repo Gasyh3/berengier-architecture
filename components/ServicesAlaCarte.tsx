@@ -46,7 +46,7 @@ export default function ServicesAlaCarte() {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center pb-5 lg:mt-0 lg:flex-1 lg:items-center lg:justify-center">
+        <div className="mt-10 flex justify-center pb-5 lg:mt-0 lg:flex-1 lg:pt-10 lg:items-center lg:justify-center">
           <div className="flex w-full flex-col items-center gap-6 lg:max-w-6xl lg:flex-row lg:items-end lg:justify-center lg:gap-6">
             {cards.map((card) => {
               const isSmall = card.variant === "small";
