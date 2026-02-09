@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSplitHero() {
   return (
-    <section className="lg:h-screen h-screen h-[350px] bg-surface">
+    <section className="lg:h-screen h-screen h-[250px] bg-surface">
       {/* 2 colonnes dès mobile */}
       <div className="grid h-full w-full grid-cols-[35%_65%] lg:grid-cols-[40%_60%] lg:h-full">
 
