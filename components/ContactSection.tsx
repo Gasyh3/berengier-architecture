@@ -41,59 +41,59 @@ export default function ContactSection() {
         </div>
 
         <div className="lg:col-span-5 sm:pr-2">
-          <div className="flex h-full flex-col justify-between gap-10">
-            <div className="grid grid-cols-[24px_1fr] gap-6">
+          <div className="flex h-full flex-col justify-between gap-8 sm:gap-10">
+            <div className="grid grid-cols-[20px_1fr] gap-4 sm:grid-cols-[24px_1fr] sm:gap-6">
               <div className="flex justify-center">
                 <span className="h-full w-[2px] bg-[#B9AB8E]/70" />
               </div>
               <div>
-                <h3 className="font-racoleta text-4xl leading-none text-[#B9AB8E] sm:text-5xl">
+                <h3 className="font-racoleta text-3xl leading-none text-[#B9AB8E] sm:text-5xl">
                   Email
                 </h3>
-                <p className="mt-5 break-words text-lg text-white/90 sm:text-xl lg:text-2xl">
+                <p className="mt-4 text-base leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mt-5 sm:text-[1rem] lg:text-2xl">
                   berengier.architecture@gmail.com
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-[24px_1fr] gap-6">
+            <div className="grid grid-cols-[20px_1fr] gap-4 sm:grid-cols-[24px_1fr] sm:gap-6">
               <div className="flex justify-center">
                 <span className="h-full w-[2px] bg-[#B9AB8E]/70" />
               </div>
               <div>
-                <h3 className="font-racoleta text-4xl leading-none text-[#B9AB8E] sm:text-5xl">
+                <h3 className="font-racoleta text-3xl leading-none text-[#B9AB8E] sm:text-5xl">
                   Numéro
                 </h3>
-                <p className="mt-5 text-lg text-white/90 sm:text-xl lg:text-2xl">
+                <p className="mt-4 text-base text-white/90 sm:mt-5 sm:text-xl lg:text-2xl">
                   +33 7 70 51 61 62
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-[24px_1fr] gap-6">
+            <div className="grid grid-cols-[20px_1fr] gap-4 sm:grid-cols-[24px_1fr] sm:gap-6">
               <div className="flex justify-center">
                 <span className="h-full w-[2px] bg-[#B9AB8E]/70" />
               </div>
               <div>
-                <h3 className="font-racoleta text-4xl leading-none text-[#B9AB8E] sm:text-5xl">
+                <h3 className="font-racoleta text-3xl leading-none text-[#B9AB8E] sm:text-5xl">
                   Localisation
                 </h3>
-                <div className="mt-5 text-lg leading-relaxed text-white/90 sm:text-xl lg:text-2xl">
+                <div className="mt-4 text-base leading-relaxed text-white/90 sm:mt-5 sm:text-xl lg:text-2xl">
                   <p>LYON</p>
                   <p>Interventions Quart Sud-Est France.</p>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-[24px_1fr] gap-6">
+            <div className="grid grid-cols-[20px_1fr] gap-4 sm:grid-cols-[24px_1fr] sm:gap-6">
               <div className="flex justify-center">
                 <span className="h-full w-[2px] bg-[#B9AB8E]/70" />
               </div>
               <div>
-                <h3 className="font-racoleta text-4xl leading-none text-[#B9AB8E] sm:text-5xl">
+                <h3 className="font-racoleta text-3xl leading-none text-[#B9AB8E] sm:text-5xl">
                   Réseaux
                 </h3>
-                <div className="mt-6 flex items-center gap-8 text-4xl text-white/90 sm:gap-10 sm:text-5xl">
+                <div className="mt-4 flex items-center gap-6 text-4xl text-white/90 sm:mt-6 sm:gap-10 sm:text-5xl">
                   {socialLinks.map((link) => (
                     <a
                       key={link.label}
