@@ -11,13 +11,13 @@ export default function Header() {
   return (
     <header className="absolute left-0 top-0 z-50 w-full text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center md:-ml-10">
           <Image
             src="/assets/logo/ico_sf.png"
             alt="Atelier Bérengier logo"
             width={128}
             height={128}
-            className="h-12 w-auto md:h-20"
+            className="h-12 w-auto md:h-24"
             priority
           />
         </Link>
