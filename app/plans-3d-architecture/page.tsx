@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Plans3DPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Plans 3D architecture</h1>
       <p className="mt-6 text-lg leading-relaxed text-slate-700">
         Les plans 3D et rendus photoréalistes permettent de sécuriser les choix esthétiques et techniques avant le
@@ -33,6 +33,6 @@ export default function Plans3DPage() {
           usage.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

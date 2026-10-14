@@ -2,7 +2,7 @@ export default function IntroStatement() {
   return (
     <section
       id="statement"
-      className="relative flex h-screen w-screen items-center justify-center bg-darkbase"
+      className="relative flex min-h-screen min-h-svh w-full items-center justify-center bg-darkbase py-16"
     >
       <h2 className="sr-only">Message d’introduction</h2>
       <div className="mx-auto w-full max-w-6xl px-6 text-center">

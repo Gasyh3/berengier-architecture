@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Services d’architecture d’intérieur</h1>
       <p className="mt-6 text-lg leading-relaxed text-slate-700">
         Bérengier Architecture propose un accompagnement complet pour vos projets : plans techniques, rendus 3D,
@@ -39,6 +39,6 @@ export default function ServicesPage() {
           Préparation des dossiers et pièces graphiques pour les démarches administratives locales.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

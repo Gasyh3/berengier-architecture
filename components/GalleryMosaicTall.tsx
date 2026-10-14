@@ -59,7 +59,7 @@ export default function GalleryMosaicTall() {
   const revealVisible = "opacity-100 translate-x-0";
 
   return (
-    <section className="relative isolate w-full bg-white p-3 sm:p-4 lg:w-screen lg:h-[300vh]">
+    <section className="relative isolate w-full bg-white p-3 sm:p-4 lg:h-[300vh]">
       <h2 className="sr-only">Galerie immersive de rendus 3D</h2>
 
       <div className="grid w-full gap-3 sm:gap-4 lg:h-full lg:grid-rows-[1.2fr_1fr_1fr]">

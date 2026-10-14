@@ -18,10 +18,10 @@ const items = [
 
 export default function ValuesTriptych() {
   return (
-    <section className="w-full bg-darkbase py-10">
+    <section className="w-full bg-darkbase py-12 sm:py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
-        {/* 3 colonnes dès mobile */}
-        <div className="grid w-full grid-cols-3 gap-4 sm:gap-6 lg:gap-16">
+        {/* empilé sur téléphone (texte lisible), 3 colonnes dès sm */}
+        <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-16">
           {items.map((item) => (
             <div key={item.body} className="relative pl-4 sm:pl-6 lg:pl-10">
               {/* barre verticale */}
@@ -30,14 +30,12 @@ export default function ValuesTriptych() {
                 className="absolute left-0 top-1 bottom-1 w-[2px] bg-[#B9AB8E]/80"
               />
 
-              {/* titre: beaucoup plus petit sur mobile */}
-              <h3 className="font-racoleta italic leading-[1.05] text-[#B9AB8E] text-[clamp(14px,3.6vw,56px)]">
+              <h3 className="font-racoleta italic leading-[1.05] text-[#B9AB8E] text-3xl sm:text-[clamp(1.25rem,3.6vw,3.5rem)]">
                 <span className="block">{item.titleLines[0]}</span>
                 <span className="block">{item.titleLines[1]}</span>
               </h3>
 
-              {/* body: compact sur mobile, normal ensuite */}
-              <p className="mt-3 sm:mt-5 text-white/90 leading-snug sm:leading-relaxed text-[clamp(10px,2.6vw,20px)]">
+              <p className="mt-3 sm:mt-5 text-white/90 leading-relaxed text-base sm:text-[clamp(0.9375rem,1.6vw,1.25rem)]">
                 {item.body}
               </p>
             </div>

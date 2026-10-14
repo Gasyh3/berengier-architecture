@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Contact</h1>
       <p className="mt-6 text-lg leading-relaxed text-slate-700">
         Une question, un projet en tête ? Échangeons pour cadrer vos besoins techniques et esthétiques.
@@ -20,13 +20,13 @@ export default function ContactPage() {
       <section className="mt-12">
         <h2 className="text-2xl font-semibold text-slate-900">Coordonnées</h2>
         <p className="mt-4 text-base leading-relaxed text-slate-700">
-          berengier.architecture@gmail.com
+          berengier.architecture<wbr />@gmail.com
           <br />
           +33 7 70 51 61 62
           <br />
           Lyon — Interventions quart Sud-Est France.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

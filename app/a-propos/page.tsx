@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AProposPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">À propos</h1>
       <p className="mt-6 text-lg leading-relaxed text-slate-700">
         Diplômé de l’Institut CREAD à Lyon, je conçois des espaces fonctionnels et élégants, en gardant une approche
@@ -32,6 +32,6 @@ export default function AProposPage() {
           Lyon et quart Sud-Est de la France. Intervention possible à distance selon la nature du projet.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

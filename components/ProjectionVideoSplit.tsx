@@ -1,6 +1,6 @@
 export default function ProjectionVideoSplit() {
   return (
-    <section className="h-[300px] w-full bg-surface lg:h-screen lg:w-screen">
+    <section className="h-[300px] w-full bg-surface lg:h-screen">
       <div className="grid h-full w-full grid-cols-[45%_55%] lg:grid-cols-[40%_60%]">
         {/* VIDEO */}
         <div className="h-full w-full p-1">

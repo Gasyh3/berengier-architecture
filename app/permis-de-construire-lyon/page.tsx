@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PermisConstruirePage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Permis de construire à Lyon</h1>
       <p className="mt-6 text-lg leading-relaxed text-slate-700">
         Préparation complète des pièces graphiques et plans nécessaires au dépôt de permis de construire. Une approche
@@ -31,6 +31,6 @@ export default function PermisConstruirePage() {
           Connaissance des règles urbaines à Lyon et dans le quart Sud-Est pour un dépôt plus fluide.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

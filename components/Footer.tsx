@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const quickLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#apropos", label: "A Propos" },
-  { href: "#conception-video", label: "Conception Vidéo" },
-  { href: "#contact", label: "Contact" }
+  { href: "/#services", label: "Services" },
+  { href: "/#apropos", label: "A Propos" },
+  { href: "/#conception-video", label: "Conception Vidéo" },
+  { href: "/#contact", label: "Contact" }
 ];
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[#B9AB8E] text-black">
       <div className="mx-auto max-w-7xl space-y-12 px-6 py-16 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-x-10">
           <div className="lg:col-span-5">
             <Image
               src="/assets/logo/noir_sf.png"
@@ -31,7 +31,7 @@ export default function Footer() {
               Contact
             </p>
             <div className="mt-8 space-y-6 text-lg text-black/80 sm:text-xl">
-              <p className="font-semibold">berengier.architecture@gmail.com</p>
+              <p className="font-semibold [overflow-wrap:anywhere]">berengier.architecture<wbr />@gmail.com</p>
               <p>+33 7 70 51 61 62</p>
               <p>Lyon et quart Sud-Est FRANCE.</p>
             </div>

@@ -32,14 +32,14 @@ export default function VideoServicesSplit() {
       </ul>
 
       <p className="mt-3 sm:mt-4 lg:mt-10">
-        Mon approche ? Montrer votre travail sous son meilleur angle, sans artifice. Des vidéos utiles, esthétiques,
+        Mon approche&nbsp;? Montrer votre travail sous son meilleur angle, sans artifice. Des vidéos utiles, esthétiques,
         au service de vos objectifs.
       </p>
     </>
   );
 
   return (
-    <section className="w-full bg-surface lg:w-screen lg:h-screen">
+    <section className="w-full bg-surface">
       {/* Mobile: titre + video en haut, texte en dessous */}
       <div className="grid w-full lg:hidden">
         <div className="grid w-full grid-cols-[55%_45%]">
@@ -84,11 +84,11 @@ export default function VideoServicesSplit() {
       </div>
 
       {/* Desktop: structure actuelle conservée */}
-      <div className="hidden h-full w-full lg:grid lg:grid-cols-[60%_40%]">
+      <div className="hidden w-full lg:grid lg:min-h-screen lg:grid-cols-[60%_40%]">
         <div className="h-full w-full min-w-0 p-1">
           <div className="flex h-full bg-[#B9AB8E]">
             <div className="w-full overflow-auto px-4 py-4 sm:px-6 sm:py-6 lg:flex lg:items-center lg:overflow-visible lg:px-16 lg:py-16">
-              <div className="max-w-none text-[clamp(0.85rem,2.4vw,1.1rem)] leading-snug text-white/95 sm:text-base lg:max-w-2xl lg:text-3xl">
+              <div className="max-w-none text-[clamp(0.85rem,2.4vw,1.1rem)] leading-snug text-white/95 sm:text-base lg:max-w-2xl lg:text-2xl 2xl:text-3xl">
                 {bodyContent}
               </div>
             </div>

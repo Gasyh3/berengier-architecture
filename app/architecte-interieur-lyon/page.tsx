@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ArchitecteInterieurLyonPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
       <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">
         Architecte d’intérieur à Lyon
       </h1>
@@ -43,6 +43,6 @@ export default function ArchitecteInterieurLyonPage() {
           Lyon, métropole lyonnaise et quart Sud-Est de la France. Interventions possibles à distance selon les besoins.
         </p>
       </section>
-    </main>
+    </div>
   );
 }
