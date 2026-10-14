@@ -1,8 +1,8 @@
 export default function ProjectionIntro() {
   return (
-    <section id="conception-video" className="w-screen h-[400px] scroll-mt-32 bg-surface lg:h-screen">
+    <section id="conception-video" className="w-full h-[400px] scroll-mt-32 bg-surface lg:h-screen">
       <div className="relative h-full w-full">
-        <h2 className="absolute bottom-10 right-6 font-racoleta text-[clamp(3.25rem,9vw,8rem)] font-black leading-none tracking-tight text-black sm:bottom-16 sm:right-16">
+        <h2 className="absolute bottom-10 right-6 font-racoleta text-[clamp(2.25rem,11vw,3.25rem)] sm:text-[clamp(3.25rem,9vw,8rem)] font-black leading-none tracking-tight text-black sm:bottom-16 sm:right-16">
           PROJECTION.
         </h2>
       </div>

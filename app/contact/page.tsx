@@ -1,32 +1,31 @@
 import type { Metadata } from "next";
+import ContentPage from "@/components/ContentPage";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact | Bérengier Architecture",
+const path = "/contact";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Contact",
   description:
-    "Contactez Bérengier Architecture pour vos projets d’aménagement intérieur, plans techniques et rendus 3D à Lyon.",
-  alternates: {
-    canonical: "/contact"
-  }
-};
+    "Contactez Bérengier Architecture, architecte d’intérieur à Lyon, pour vos projets d’aménagement, plans techniques, rendus 3D et permis de construire.",
+  path
+});
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
-      <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Contact</h1>
-      <p className="mt-6 text-lg leading-relaxed text-slate-700">
-        Une question, un projet en tête ? Échangeons pour cadrer vos besoins techniques et esthétiques.
-      </p>
-
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold text-slate-900">Coordonnées</h2>
-        <p className="mt-4 text-base leading-relaxed text-slate-700">
-          berengier.architecture@gmail.com
-          <br />
-          +33 7 70 51 61 62
-          <br />
-          Lyon — Interventions quart Sud-Est France.
-        </p>
-      </section>
-    </main>
+    <ContentPage
+      path={path}
+      title="Contact"
+      intro={[
+        "Une question, un projet en tête\u00a0? Je suis à votre écoute pour en discuter et vous accompagner pas à pas.",
+        "Échangeons pour cadrer vos besoins techniques et esthétiques."
+      ]}
+      sections={[
+        {
+          title: "Localisation",
+          paragraphs: ["Lyon — interventions dans le quart Sud-Est de la France, et à distance selon les projets."]
+        }
+      ]}
+    />
   );
 }

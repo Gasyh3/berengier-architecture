@@ -59,7 +59,7 @@ export default function GallerySplit() {
   const revealVisible = "opacity-100 translate-x-0";
 
   return (
-    <section className="w-full bg-darkbase p-3 sm:p-4 lg:w-screen lg:h-screen lg:p-3">
+    <section className="w-full bg-darkbase p-3 sm:p-4 lg:h-screen lg:p-3">
       <h2 className="sr-only">Galerie de projets en 3D</h2>
 
       {/* MOBILE / TABLET (jusqu'à lg) */}
@@ -78,7 +78,6 @@ export default function GallerySplit() {
               fill
               className="object-cover"
               sizes="45vw"
-              priority
             />
           </div>
 
@@ -96,7 +95,6 @@ export default function GallerySplit() {
                 fill
                 className="object-cover"
                 sizes="55vw"
-                priority
               />
             </div>
 
@@ -134,7 +132,6 @@ export default function GallerySplit() {
               fill
               className="object-cover"
               sizes="33vw"
-              priority
             />
           </div>
 
@@ -152,7 +149,6 @@ export default function GallerySplit() {
                 fill
                 className="object-cover"
                 sizes="67vw"
-                priority
               />
             </div>
 

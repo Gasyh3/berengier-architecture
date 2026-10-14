@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { contact } from "@/lib/site";
 
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/berengier.architecture/", Icon: Instagram },
@@ -9,17 +10,17 @@ const socialLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-screen min-h-screen scroll-mt-32 mt-4 pt-10 sm:pt-8 bg-darkbase">
-      <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-14 px-6 py-14 sm:px-10 sm:mr-3 sm:pt-8 lg:grid-cols-12 lg:px-16">
+    <section id="contact" className="w-full min-h-screen scroll-mt-32 mt-4 pt-10 sm:pt-8 bg-darkbase">
+      <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-14 px-6 py-14 sm:px-10 sm:pt-8 lg:grid-cols-12 lg:gap-x-10 lg:px-16">
         <div className="flex flex-col justify-between pt-6 lg:col-span-7">
           <div>
-            <h2 className="font-racoleta text-5xl leading-none tracking-tight text-[#B9AB8E] sm:text-6xl lg:text-7xl">
+            <h2 className="font-racoleta text-4xl leading-none tracking-tight text-[#B9AB8E] min-[360px]:text-5xl sm:text-6xl lg:text-7xl">
               Contactez-moi
             </h2>
             <div className="mt-10 space-y-10 text-lg leading-relaxed text-white/90 sm:text-xl lg:text-2xl">
-              <p>Une question, un projet en tête ?</p>
+              <p>Une question, un projet en tête&nbsp;?</p>
               <p>
-                Je suis à votre écoute pour en discuter
+                Je suis à votre écoute pour en discuter{" "}
                 <br className="hidden sm:block" />
                 et vous accompagner pas à pas.
               </p>
@@ -51,7 +52,9 @@ export default function ContactSection() {
                   Email
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mt-5 sm:text-[1rem] lg:text-2xl">
-                  berengier.architecture@gmail.com
+                  <a href={`mailto:${contact.email}`} className="transition hover:text-white hover:underline">
+                    berengier.architecture<wbr />@gmail.com
+                  </a>
                 </p>
               </div>
             </div>
@@ -65,7 +68,9 @@ export default function ContactSection() {
                   Numéro
                 </h3>
                 <p className="mt-4 text-base text-white/90 sm:mt-5 sm:text-xl lg:text-2xl">
-                  +33 7 70 51 61 62
+                  <a href={`tel:${contact.phone}`} className="transition hover:text-white hover:underline">
+                    {contact.phoneDisplay}
+                  </a>
                 </p>
               </div>
             </div>

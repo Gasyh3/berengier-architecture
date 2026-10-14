@@ -1,42 +1,42 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { racoleta, reboleta } from "./fonts";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InitialLoader from "@/components/InitialLoader";
+import { contact, siteName, siteUrl, socialLinks } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
-const siteUrl = "https://atelier-berengier.fr";
+const defaultTitle = "Architecte d’intérieur à Lyon | Bérengier Architecture";
+const defaultDescription =
+  "Architecte d’intérieur à Lyon : plans d’état des lieux, plans techniques, rendus 3D photoréalistes et permis de construire, pour particuliers et professionnels.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
-    template: "%s | Bérengier Architecture"
+    default: defaultTitle,
+    template: `%s | ${siteName}`
   },
-  description:
-    "Bérengier Architecture accompagne les entreprises du bâtiment à Lyon et en France : plans techniques, relevés, modélisations BIM et rendus 3D photoréalistes.",
-  keywords: [
-    "Bérengier",
-    "Berengier architecture",
-    "architecte lyon",
-    "architecte d'intérieur lyon",
-    "plans techniques lyon",
-    "rendus 3D lyon",
-    "atelier berengier",
-    "architecte indépendant lyon"
-  ],
+  description: defaultDescription,
+  applicationName: siteName,
+  authors: [{ name: "Quentin Bérengier" }],
+  creator: siteName,
+  formatDetection: { telephone: false, email: false, address: false },
   alternates: {
     canonical: "/"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 }
+  },
   openGraph: {
-    title: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
-    description:
-      "Plans techniques, relevés et rendus 3D pour les professionnels du bâtiment à Lyon et partout en France.",
-    url: siteUrl,
-    siteName: "Bérengier Architecture",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: "/",
+    siteName,
     locale: "fr_FR",
     type: "website",
     images: [
@@ -50,45 +50,89 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bérengier Architecture | Architecte à Lyon · Plans & Rendus 3D",
-    description:
-      "Architecte indépendant basé à Lyon : plans techniques, modélisations et rendus 3D pour entreprises du bâtiment.",
+    title: defaultTitle,
+    description: defaultDescription,
     images: ["/og-image.jpg"]
   },
   icons: {
-    icon: "/assets/favicon.ico"
+    icon: "/assets/favicon.ico",
+    apple: "/assets/logo/ico.png"
   }
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0E0E0E"
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Bérengier Architecture",
-  url: siteUrl,
-  image: `${siteUrl}/assets/logo/noir_sf.png`,
-  logo: `${siteUrl}/assets/logo/noir_sf.png`,
-  description:
-    "Architecte d’intérieur à Lyon spécialisé en plans techniques, rendus 3D photoréalistes et conception sur mesure.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Lyon",
-    addressCountry: "FR"
-  },
-  areaServed: ["Lyon", "Auvergne-Rhône-Alpes", "France"],
-  priceRange: "€€",
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 45.764,
-    longitude: 4.8357
-  },
-  telephone: "+33770516162",
-  email: "berengier.architecture@gmail.com",
-  sameAs: ["https://www.instagram.com/", "https://www.linkedin.com/", "https://www.facebook.com/"],
-  founder: {
-    "@type": "Person",
-    name: "Bérengier"
-  }
-} as const;
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      inLanguage: "fr-FR",
+      publisher: { "@id": `${siteUrl}/#business` }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#business`,
+      name: siteName,
+      url: siteUrl,
+      image: `${siteUrl}/og-image.jpg`,
+      logo: `${siteUrl}/assets/logo/noir_sf.png`,
+      description: defaultDescription,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lyon",
+        addressRegion: "Auvergne-Rhône-Alpes",
+        addressCountry: "FR"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 45.764,
+        longitude: 4.8357
+      },
+      areaServed: [
+        { "@type": "City", name: "Lyon" },
+        { "@type": "AdministrativeArea", name: "Métropole de Lyon" },
+        { "@type": "AdministrativeArea", name: "Auvergne-Rhône-Alpes" },
+        { "@type": "Country", name: "France" }
+      ],
+      priceRange: "€€",
+      telephone: contact.phone,
+      email: contact.email,
+      sameAs: socialLinks.map((link) => link.href),
+      founder: {
+        "@type": "Person",
+        name: "Quentin Bérengier",
+        jobTitle: "Architecte d’intérieur",
+        alumniOf: "Institut CREAD Lyon"
+      },
+      knowsAbout: [
+        "Architecture d’intérieur",
+        "Plans techniques",
+        "Rendus 3D photoréalistes",
+        "Permis de construire",
+        "Déclaration préalable",
+        "Vidéo architecturale"
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Services à la carte",
+        itemListElement: [
+          "Plan d’état des lieux (EDL)",
+          "Plan projet",
+          "Plans techniques et d’exécution",
+          "Rendus 3D photoréalistes",
+          "Permis de construire et déclaration préalable",
+          "Conception vidéo pour professionnels de l’aménagement"
+        ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } }))
+      }
+    }
+  ]
+};
 
 export default function RootLayout({
   children

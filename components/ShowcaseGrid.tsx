@@ -75,7 +75,6 @@ export default function ShowcaseGrid() {
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 33vw, 35vw"
-              priority
             />
           </div>
 
@@ -91,7 +90,6 @@ export default function ShowcaseGrid() {
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 67vw, 65vw"
-              priority
             />
           </div>
         </div>
