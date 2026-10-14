@@ -1,3 +1,5 @@
+import LazyVideo from "@/components/LazyVideo";
+
 export default function VideoServicesSplit() {
   const bodyContent = (
     <>
@@ -58,16 +60,12 @@ export default function VideoServicesSplit() {
 
           <div className="min-h-[300px] w-full p-1">
             <div className="relative h-full w-full overflow-hidden">
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              >
-                <source src="/assets/videos/vd11.mp4" type="video/mp4" />
-              </video>
+              <LazyVideo
+              className="absolute inset-0 h-full w-full object-cover"
+              src="/assets/videos/vd11.mp4"
+              poster="/assets/videos/vd11-poster.jpg"
+              label="Vidéo de mise en scène d’un mobilier dans une ambiance réaliste"
+            />
             </div>
           </div>
         </div>
@@ -97,16 +95,12 @@ export default function VideoServicesSplit() {
 
         <div className="h-full w-full p-1">
           <div className="relative h-full w-full overflow-hidden">
-            <video
+            <LazyVideo
               className="absolute inset-0 h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              <source src="/assets/videos/vd11.mp4" type="video/mp4" />
-            </video>
+              src="/assets/videos/vd11.mp4"
+              poster="/assets/videos/vd11-poster.jpg"
+              label="Vidéo de mise en scène d’un mobilier dans une ambiance réaliste"
+            />
           </div>
         </div>
       </div>

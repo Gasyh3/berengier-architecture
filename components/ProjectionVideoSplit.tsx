@@ -1,3 +1,5 @@
+import LazyVideo from "@/components/LazyVideo";
+
 export default function ProjectionVideoSplit() {
   return (
     <section className="h-[300px] w-full bg-surface lg:h-screen">
@@ -5,16 +7,12 @@ export default function ProjectionVideoSplit() {
         {/* VIDEO */}
         <div className="h-full w-full p-1">
           <div className="relative h-full w-full overflow-hidden">
-            <video
+            <LazyVideo
               className="absolute inset-0 h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              <source src="/assets/videos/vd222.mp4" type="video/mp4" />
-            </video>
+              src="/assets/videos/vd222.mp4"
+              poster="/assets/videos/vd222-poster.jpg"
+              label="Vidéo de présentation d’un projet d’aménagement intérieur en 3D"
+            />
           </div>
         </div>
 

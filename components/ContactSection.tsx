@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { contact } from "@/lib/site";
 
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/berengier.architecture/", Icon: Instagram },
@@ -51,7 +52,9 @@ export default function ContactSection() {
                   Email
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-white/90 [overflow-wrap:anywhere] sm:mt-5 sm:text-[1rem] lg:text-2xl">
-                  berengier.architecture<wbr />@gmail.com
+                  <a href={`mailto:${contact.email}`} className="transition hover:text-white hover:underline">
+                    berengier.architecture<wbr />@gmail.com
+                  </a>
                 </p>
               </div>
             </div>
@@ -65,7 +68,9 @@ export default function ContactSection() {
                   Numéro
                 </h3>
                 <p className="mt-4 text-base text-white/90 sm:mt-5 sm:text-xl lg:text-2xl">
-                  +33 7 70 51 61 62
+                  <a href={`tel:${contact.phone}`} className="transition hover:text-white hover:underline">
+                    {contact.phoneDisplay}
+                  </a>
                 </p>
               </div>
             </div>

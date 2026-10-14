@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex shrink-0 items-center 2xl:-ml-10">
           <Image
             src="/assets/logo/ico_sf.png"
-            alt="Atelier Bérengier logo"
+            alt="Bérengier Architecture — accueil"
             width={128}
             height={128}
             className="h-12 w-auto md:h-24"

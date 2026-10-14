@@ -11,11 +11,10 @@ export default function AboutSplitHero() {
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src="/assets/sets/8.jpg"
-              alt="Rendu 3D d’aménagement intérieur à Lyon"
+              alt="Vue de Lyon : pont sur le Rhône et tour Part-Dieu"
               fill
               className="object-cover object-[50%_58%] lg:object-center"
               sizes="(min-width: 1024px) 40vw, 45vw"
-              priority
             />
           </div>
         </div>

@@ -78,7 +78,6 @@ export default function GallerySplit() {
               fill
               className="object-cover"
               sizes="45vw"
-              priority
             />
           </div>
 
@@ -96,7 +95,6 @@ export default function GallerySplit() {
                 fill
                 className="object-cover"
                 sizes="55vw"
-                priority
               />
             </div>
 
@@ -134,7 +132,6 @@ export default function GallerySplit() {
               fill
               className="object-cover"
               sizes="33vw"
-              priority
             />
           </div>
 
@@ -152,7 +149,6 @@ export default function GallerySplit() {
                 fill
                 className="object-cover"
                 sizes="67vw"
-                priority
               />
             </div>
 

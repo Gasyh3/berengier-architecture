@@ -76,7 +76,6 @@ export default function GalleryMosaicTall() {
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 100vw, 100vw"
-            priority
           />
         </div>
 

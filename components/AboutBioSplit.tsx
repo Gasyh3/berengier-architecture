@@ -39,11 +39,10 @@ export default function AboutBioSplit() {
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src="/assets/DukeDSC_4803.jpg"
-              alt="Portrait de Bérengier"
+              alt="Portrait de Quentin Bérengier, architecte d’intérieur à Lyon"
               fill
               className="object-cover object-[60%_center] sm:object-[55%_center] lg:object-center"
               sizes="(min-width: 1024px) 33vw, 40vw"
-              priority
             />
           </div>
         </div>

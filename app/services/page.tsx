@@ -1,44 +1,63 @@
 import type { Metadata } from "next";
+import ContentPage from "@/components/ContentPage";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Services d’architecture d’intérieur | Bérengier Architecture",
+const path = "/services";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Services d’architecture d’intérieur",
   description:
-    "Plans techniques, rendus 3D, relevés, permis de construire et accompagnement sur mesure pour vos projets d’aménagement intérieur.",
-  alternates: {
-    canonical: "/services"
-  }
-};
+    "Services à la carte à Lyon : plan d’état des lieux, plan projet, plans techniques, rendus 3D photoréalistes et permis de construire, pour particuliers et professionnels.",
+  path
+});
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <h1 className="text-4xl font-semibold text-slate-900 sm:text-5xl">Services d’architecture d’intérieur</h1>
-      <p className="mt-6 text-lg leading-relaxed text-slate-700">
-        Bérengier Architecture propose un accompagnement complet pour vos projets : plans techniques, rendus 3D,
-        modélisation et coordination. Chaque prestation est pensée pour clarifier vos choix et sécuriser les étapes du
-        chantier.
-      </p>
-
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold text-slate-900">Plans et relevés</h2>
-        <p className="mt-4 text-base leading-relaxed text-slate-700">
-          Relevés, plans d’état des lieux, plans projet et plans d’exécution pour une base technique fiable.
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-900">Rendus 3D photoréalistes</h2>
-        <p className="mt-4 text-base leading-relaxed text-slate-700">
-          Des visuels précis pour faciliter la projection, sécuriser les décisions et valoriser le projet.
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-900">Permis de construire</h2>
-        <p className="mt-4 text-base leading-relaxed text-slate-700">
-          Préparation des dossiers et pièces graphiques pour les démarches administratives locales.
-        </p>
-      </section>
-    </div>
+    <ContentPage
+      path={path}
+      title="Services d’architecture d’intérieur"
+      intro={[
+        "Que vous soyez professionnel ou particulier, Bérengier Architecture vous accompagne sur l’ensemble du projet ou vous propose ses services à la carte.",
+        "Chaque prestation est pensée pour clarifier vos choix et sécuriser les étapes du chantier."
+      ]}
+      sections={[
+        {
+          title: "EDL — Plan d’état des lieux",
+          paragraphs: [
+            "Prise de cotes et relevés précis de l’existant, avec des synthèses claires et des livrables prêts à partager. C’est la base technique fiable de tout projet."
+          ]
+        },
+        {
+          title: "PRO — Plan projet",
+          paragraphs: [
+            "Organisation spatiale optimisée, annotations et variantes rapides pour comparer les options d’aménagement avant de vous engager."
+          ]
+        },
+        {
+          title: "EXE — Plans techniques",
+          paragraphs: [
+            "Plans d’exécution détaillés et normalisés, destinés aux équipes chantier, pour que chaque intervenant dispose d’informations précises."
+          ]
+        },
+        {
+          title: "3D — Rendus 3D photoréalistes",
+          paragraphs: [
+            "Des visuels photoréalistes pour se projeter, sécuriser les décisions et convaincre vos clients ou vos investisseurs."
+          ]
+        },
+        {
+          title: "PC/DP — Permis de construire et déclaration préalable",
+          paragraphs: [
+            "Préparation des dossiers et des pièces graphiques nécessaires aux démarches administratives locales."
+          ]
+        },
+        {
+          title: "Pour les professionnels de l’aménagement",
+          paragraphs: [
+            "Cuisinistes, menuisiers, fabricants ou revendeurs de mobilier sur-mesure : je réalise aussi vos plans, rendus 3D et contenus vidéo pour présenter vos projets à vos clients."
+          ]
+        }
+      ]}
+    />
   );
 }
